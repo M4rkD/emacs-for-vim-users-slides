@@ -1,0 +1,127 @@
+#+TITLE: Emacs for vim users
+#+AUTHOR: Mark Dawson
+#+EMAIL: mark.dawson@swansea.ac.uk
+* Introduction
+** My editor journey
+*** long time vim users
+*** tried and failed with emacs several times
+*** found spacemacs and fell in love with emacs combined with modal editing
+** Spacemacs
+- http://spacemacs.org
+- https://github.com/syl20bnr/spacemacs
+* Survey
+** which editors do people use?
+*** vim
+*** emacs
+*** atom
+*** sublime
+*** an IDE
+*** other?
+
+** who configures their editor with scripts?
+*** plugins?
+*** vimscript?
+*** javascript/pytho?
+* Lets talk about vim
+** Pros
+*** very lightweight and portable
+*** fast to start up
+*** available on virtually any linux machine you'll log into
+*** fast modal editing?
+** Cons
+*** extending is not easy
+*** integration with a shell is limited
+* Emacs
+** Pros
+*** extremely extendable
+*** fairly universally available
+*** Easy to configure!
+*** elisp
+*** "Emacs is my OS"...
+** Cons
+*** Difficult to configure
+*** elisp
+*** Slower to startup, especially with plugins
+*** Heavier (but not as bad you might think)
+*** Not as universally available as vim
+*** non-modal key bindings?
+*** multi-key bindings
+* Evil mode
+** almost complete vim emulation
+** some minor differences:
+** doesn't handle movement in extremely large files (several GB) files well
+** can even handle ex commands
+** doesn't understand .vim configuration
+** emacs macros are sometimes a better bet
+* Concepts and gotchas
+** major and minor modes
+** frames, windows and buffers
+** packages
+** elisp
+** States (normal, insert, visual, emacs etc)
+** Working directory
+** Ctrl-g (not ctrl-c)
+* Spacemacs features
+** Mnemonic
+** Discoverable
+** Consistent
+** "Crowd-Configured".
+* Mnemonic & Discoverable
+** which key Mnemonic grouping in normal mode
+** major mode bindings (, and SPC-m)
+** Helm M-x (SPC-SPC)
+** help-describe (SPC-h-d) keybinding group (key, function, variable)
+** major mode bindings (SPC-?)
+* Consistent
+** Different modes (generally) have fairly consistent and expected behaviour for a vim users
+** Evil mode works globally, through "auto-evilification"
+** a set of keys work as per vim in an evilified state (e.g. dired)
+****  keys /, :, h, j, k, l, n, N, v, V, gg, G, C-f, C-b, C-d, C-e, C-u, C-y and C-z 
+** Some plugins are less well developed, but it's constantly improving
+* Crowd-Configured
+** spacemacs implements a layer configuration system
+** default layers are available on the github repo (and SPC-h-l)
+* Some comment
+** emacsclient
+** easily switch between Emacs and Vim mode with Ctrl-z
+** Spacemacs auto-downloads packages, not as simple to set up without an internet connection
+** If using a http proxy for internet, use the http_proxy environment variable
+** Command line also works well (as long as you export the appropriate TERM variable)
+* Issues
+** very slow to startup (can use emacsclient)
+** Windows shell is limited
+*** use eshell (if you want to learn something new)
+*** use cygwin
+*** use the linux subsystem and X11 (or terminal)
+* Helm
+** Makes any list filterable list
+*** SPC-/ (smart search)
+*** SPC-b-b (helm-mini)
+*** SPC-f-r (helm-recentf)
+*** SPC-SPC (M-x)
+*** SPC-s-s (helm-swoop)
+*** SPC-f-f (helm-find-files)
+*** SPC-p-r (helm-projectile-recentf)
+*** Etc...!
+* Projectile
+** Looks for a VCS folder or a .projectile file - and treats it as a project
+** Found under SPC-p
+** Namespacing for searches, file lookups from any directory
+* Org mode
+** easy editing for structured data
+*** cycle all levels (shift-TAB)
+*** cycle children (ctrl-TAB)
+*** to rearrange (Alt- Arrow)
+*** new entry (Ctrl-Enter)
+** Literate programming
+** Agenda and todo management
+* Other stuff
+** Magit: an incredible porcelain for git ( SPC-g-s)
+** Tramp: visit any directory anywhere ( [protocol]:[hostname]:/path/to/file )
+** Ediff: the answer to vimdiff
+** Terminal: run a terminal emulator inside emacs
+*** ansi-term (terminal "without" emacs)
+*** shell (dumb terminal with emacs)
+*** eshell
+* Thanks for listening
+** Questions?
